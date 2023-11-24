@@ -1,16 +1,11 @@
 <template>
   <v-app>
-    <MainToolbar />
-
-    <v-main>
-      <router-view />
-    </v-main>
+    <MainTemplate />
   </v-app>
 </template>
 
 <script setup lang="ts">
-import { RouterView } from 'vue-router';
-import { MainToolbar } from '@/components';
+import { MainTemplate } from '@/components';
 </script>
 
 <style scoped></style>
