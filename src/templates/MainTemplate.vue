@@ -2,7 +2,9 @@
   <v-container>
     <MainToolbar />
     <v-main>
-      <slot></slot>
+      <v-container class="px-0">
+        <slot></slot>
+      </v-container>
     </v-main>
   </v-container>
 </template>

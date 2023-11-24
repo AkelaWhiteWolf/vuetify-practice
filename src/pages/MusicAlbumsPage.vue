@@ -1,12 +1,12 @@
 <template>
   <MainTemplate>
-    <ForestCarousel />
+    <MusicAlbumsGrid />
   </MainTemplate>
 </template>
 
 <script setup lang="ts">
+import { MusicAlbumsGrid } from '@/components';
 import { MainTemplate } from '@/templates';
-import { ForestCarousel } from '@/components';
 </script>
 
 <style scoped></style>
