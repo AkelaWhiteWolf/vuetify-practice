@@ -24,6 +24,7 @@
           v-for="{ title, value } in navItems"
           :key="value"
           link
+          :disabled="value.includes(String(currentRouteName))"
           @click="router.push(value)"
           >{{ title }}</v-list-item
         >
@@ -33,12 +34,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { ref, computed } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 
 const router = useRouter();
+const route = useRoute();
 
 const drawer = ref(false);
+const currentRouteName = computed(() => route.name);
 
 const navItems = [
   { title: 'Home', value: '/home' },
