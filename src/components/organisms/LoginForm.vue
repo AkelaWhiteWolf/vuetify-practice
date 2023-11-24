@@ -1,30 +1,32 @@
 <template>
-  <v-card variant="elevated" width="400" class="mx-auto pa-4">
-    <v-card-title class="text-center">Login Here</v-card-title>
-    <v-card-item>
-      <v-sheet>
-        <v-form fast-fail @submit.prevent="onLogin" v-model="form.isValid" validate-on="input">
-          <v-text-field
-            label="Login"
-            variant="underlined"
-            prepend-inner-icon="mdi-mail"
-            v-model="form.data.login"
-            :rules="form.rules.login"
-          />
-          <v-text-field
-            label="Password"
-            type="password"
-            variant="underlined"
-            prepend-inner-icon="mdi-key"
-            v-model="form.data.password"
-            :rules="form.rules.password"
-          />
-          <v-checkbox label="Remember me" color="primary" v-model="form.rememberMe"></v-checkbox>
-          <v-btn type="submit" block class="mt-2" color="red-darken-1">Login</v-btn>
-        </v-form>
-      </v-sheet>
-    </v-card-item>
-  </v-card>
+  <v-container>
+    <v-card variant="elevated" width="400" class="mx-auto pa-4">
+      <v-card-title class="text-center">Login Here</v-card-title>
+      <v-card-item>
+        <v-sheet>
+          <v-form fast-fail @submit.prevent="onLogin" v-model="form.isValid" validate-on="input">
+            <v-text-field
+              label="Login"
+              variant="underlined"
+              prepend-inner-icon="mdi-mail"
+              v-model="form.data.login"
+              :rules="form.rules.login"
+            />
+            <v-text-field
+              label="Password"
+              type="password"
+              variant="underlined"
+              prepend-inner-icon="mdi-key"
+              v-model="form.data.password"
+              :rules="form.rules.password"
+            />
+            <v-checkbox label="Remember me" color="primary" v-model="form.rememberMe"></v-checkbox>
+            <v-btn type="submit" block class="mt-2" color="red-darken-1">Login</v-btn>
+          </v-form>
+        </v-sheet>
+      </v-card-item>
+    </v-card>
+  </v-container>
 
   <CustomSnackbar v-bind="snackbarProps" v-model="modelValue" />
 </template>
