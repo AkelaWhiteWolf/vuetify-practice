@@ -1,29 +1,26 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import { HomePage } from '@/pages';
 
+export enum RouteNames {
+  Home = 'Home',
+  Login = 'Login',
+}
+
 export const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     { path: '/home', redirect: '/' },
     {
       path: '/',
-      name: 'home',
+      name: RouteNames.Home,
       component: HomePage,
       meta: {
         title: 'Home'
       }
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import('@/pages/AboutPage.vue'),
-      meta: {
-        title: 'About'
-      }
-    },
-    {
       path: '/login',
-      name: 'login',
+      name: RouteNames.Login,
       component: () => import('@/pages/LoginPage.vue'),
       meta: {
         title: 'Login'
