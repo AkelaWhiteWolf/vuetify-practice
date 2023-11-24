@@ -25,11 +25,16 @@
       </v-sheet>
     </v-card-item>
   </v-card>
+
+  <CustomSnackbar v-bind="snackbarProps" v-model="modelValue" />
 </template>
 
 <script setup lang="ts">
 import { reactive } from 'vue';
 import { regExps } from '@/data';
+import { useSnackbar } from '@/composes';
+
+const { CustomSnackbar, snackbarProps, modelValue, openSnackbar } = useSnackbar();
 
 const form = reactive({
   isValid: false,
@@ -50,7 +55,7 @@ const form = reactive({
 });
 
 function onLogin() {
-  if (form.isValid) alert('Imagine that data was sended to server');
+  if (form.isValid) openSnackbar({ text: 'Imagine that data was sended to server' });
 }
 </script>
 
