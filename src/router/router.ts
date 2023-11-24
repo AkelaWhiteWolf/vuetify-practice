@@ -4,6 +4,7 @@ import { HomePage } from '@/pages';
 export enum RouteNames {
   Home = 'Home',
   Login = 'Login',
+  NotFound = 'NotFound'
 }
 
 export const router = createRouter({
@@ -24,6 +25,14 @@ export const router = createRouter({
       component: () => import('@/pages/LoginPage.vue'),
       meta: {
         title: 'Login'
+      }
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: RouteNames.NotFound,
+      component: () => import('@/pages/NotFoundPage.vue'),
+      meta: {
+        title: '404'
       }
     }
   ]
