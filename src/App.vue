@@ -1,11 +1,13 @@
 <template>
   <v-app>
-    <MainTemplate />
+    <router-view v-slot="{ Component }">
+      <v-expand-transition>
+        <component :is="Component" />
+      </v-expand-transition>
+    </router-view>
   </v-app>
 </template>
 
-<script setup lang="ts">
-import { MainTemplate } from '@/components';
-</script>
+<script setup lang="ts"></script>
 
 <style scoped></style>

@@ -2,9 +2,7 @@
   <v-container>
     <MainToolbar />
     <v-main>
-      <v-expand-transition>
-        <router-view />
-      </v-expand-transition>
+      <slot></slot>
     </v-main>
   </v-container>
 </template>
