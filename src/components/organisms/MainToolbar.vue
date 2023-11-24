@@ -14,6 +14,7 @@
       color="pink-darken-4"
       size="small"
       to="/login"
+      class="mr-3"
     >
       Login
     </v-btn>
