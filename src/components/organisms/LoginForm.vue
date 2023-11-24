@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-card variant="elevated" width="400" class="mx-auto pa-4">
-      <v-btn prepend-icon="mdi-home" variant="flat" size="small" :to="RouteNames.Home"
+      <v-btn prepend-icon="mdi-home" variant="flat" size="small" :to="Routes.Home"
         >to home page</v-btn
       >
       <v-card-title class="text-center">Login Here</v-card-title>
@@ -38,7 +38,7 @@
 import { reactive } from 'vue';
 import { regExps } from '@/data';
 import { useSnackbar } from '@/composes';
-import { RouteNames } from '@/router';
+import { Routes } from '@/router';
 
 const { CustomSnackbar, snackbarProps, modelValue, openSnackbar } = useSnackbar();
 
