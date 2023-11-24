@@ -7,7 +7,8 @@
 </template>
 
 <script setup lang="ts">
-import { MainTemplate, ForestCarousel } from '@/components';
+import { MainTemplate } from '@/templates';
+import { ForestCarousel } from '@/components';
 </script>
 
 <style scoped></style>
